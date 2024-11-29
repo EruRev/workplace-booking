@@ -1,0 +1,16 @@
+com\irlix\traineeship\workplacebooking\services\impl\UserDetailsImplTest.class
+com\irlix\traineeship\workplacebooking\mappers\ReportMapperTest$1.class
+com\irlix\traineeship\workplacebooking\payload\request\LoginRequestTest.class
+com\irlix\traineeship\workplacebooking\mappers\WorkplaceMapperTest.class
+com\irlix\traineeship\workplacebooking\services\OfficeServiceTest.class
+com\irlix\traineeship\workplacebooking\services\WorkplaceServiceTest$TestWorkplaceData.class
+com\irlix\traineeship\workplacebooking\services\impl\UserDetailsServiceImplTest.class
+com\irlix\traineeship\workplacebooking\payload\response\JwtResponseTest.class
+com\irlix\traineeship\workplacebooking\services\UserServiceTest.class
+com\irlix\traineeship\workplacebooking\services\UserServiceTest$TestData.class
+com\irlix\traineeship\workplacebooking\services\ProblemServiceTest.class
+com\irlix\traineeship\workplacebooking\mappers\ReportMapperTest.class
+com\irlix\traineeship\workplacebooking\services\WorkplaceServiceTest.class
+com\irlix\traineeship\workplacebooking\services\OfficeServiceTest$TestOfficeData.class
+com\irlix\traineeship\workplacebooking\services\MailSenderServiceTest.class
+com\irlix\traineeship\workplacebooking\services\ProblemServiceTest$TestReportData.class

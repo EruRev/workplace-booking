@@ -1,0 +1,11 @@
+com\irlix\traineeship\workplacebooking\validatorbooking\CorrectDateStartValidator.class
+com\irlix\traineeship\workplacebooking\config\BookingScheduler.class
+com\irlix\traineeship\workplacebooking\validatorbooking\BookingValidator.class
+com\irlix\traineeship\workplacebooking\dto\WorkplaceForUserDTO.class
+com\irlix\traineeship\workplacebooking\services\ProblemReportService.class
+com\irlix\traineeship\workplacebooking\entities\ProblemReportEntity.class
+com\irlix\traineeship\workplacebooking\entities\enums\EnumReport.class
+com\irlix\traineeship\workplacebooking\dto\ProblemReportForUserDTO.class
+com\irlix\traineeship\workplacebooking\mappers\ProblemReportMapper.class
+com\irlix\traineeship\workplacebooking\repositories\ProblemReportRepository.class
+com\irlix\traineeship\workplacebooking\controllers\ProblemReportController.class
