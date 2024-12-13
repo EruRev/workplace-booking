@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-10-03T10:56:05+0300",
+    date = "2024-12-13T09:54:01+0300",
     comments = "version: 1.6.0, compiler: javac, environment: Java 22.0.1 (Oracle Corporation)"
 )
 @Component
@@ -42,12 +42,12 @@ public class UserMapperImpl implements UserMapper {
         String fullName = null;
         String phoneNumber = null;
         String email = null;
+        Boolean isDeleted = null;
 
         fullName = userEntity.getFullName();
         phoneNumber = userEntity.getPhoneNumber();
         email = userEntity.getEmail();
-
-        boolean isDeleted = false;
+        isDeleted = userEntity.getIsDeleted();
 
         UserForAdminDTO userForAdminDTO = new UserForAdminDTO( fullName, phoneNumber, email, isDeleted );
 
@@ -65,6 +65,7 @@ public class UserMapperImpl implements UserMapper {
         userEntity.setFullName( userForAdminDTO.fullName() );
         userEntity.setPhoneNumber( userForAdminDTO.phoneNumber() );
         userEntity.setEmail( userForAdminDTO.email() );
+        userEntity.setIsDeleted( userForAdminDTO.isDeleted() );
 
         return userEntity;
     }
@@ -78,5 +79,6 @@ public class UserMapperImpl implements UserMapper {
         toUserEntity.setFullName( userForAdminDTO.fullName() );
         toUserEntity.setPhoneNumber( userForAdminDTO.phoneNumber() );
         toUserEntity.setEmail( userForAdminDTO.email() );
+        toUserEntity.setIsDeleted( userForAdminDTO.isDeleted() );
     }
 }

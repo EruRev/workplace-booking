@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-10-03T10:56:05+0300",
+    date = "2024-12-13T09:54:01+0300",
     comments = "version: 1.6.0, compiler: javac, environment: Java 22.0.1 (Oracle Corporation)"
 )
 @Component
@@ -24,14 +24,14 @@ public class WorkspaceMapperImpl implements WorkspaceMapper {
         String name = null;
         Short floorNumber = null;
         Short roomNumber = null;
+        Boolean isDeleted = null;
         UUID officeId = null;
 
         name = workspaceEntity.getName();
         floorNumber = workspaceEntity.getFloorNumber();
         roomNumber = workspaceEntity.getRoomNumber();
+        isDeleted = workspaceEntity.getIsDeleted();
         officeId = workspaceEntity.getOfficeId();
-
-        boolean isDeleted = false;
 
         WorkspaceForAdminDTO workspaceForAdminDTO = new WorkspaceForAdminDTO( name, floorNumber, roomNumber, isDeleted, officeId );
 
@@ -53,6 +53,7 @@ public class WorkspaceMapperImpl implements WorkspaceMapper {
         if ( workspaceForAdminDTO.roomNumber() != null ) {
             workspaceEntity.setRoomNumber( workspaceForAdminDTO.roomNumber() );
         }
+        workspaceEntity.setIsDeleted( workspaceForAdminDTO.isDeleted() );
         workspaceEntity.setOfficeId( workspaceForAdminDTO.officeId() );
 
         return workspaceEntity;
@@ -71,6 +72,7 @@ public class WorkspaceMapperImpl implements WorkspaceMapper {
         if ( workspaceForAdminDTO.roomNumber() != null ) {
             toWorkspaceEntity.setRoomNumber( workspaceForAdminDTO.roomNumber() );
         }
+        toWorkspaceEntity.setIsDeleted( workspaceForAdminDTO.isDeleted() );
         toWorkspaceEntity.setOfficeId( workspaceForAdminDTO.officeId() );
     }
 

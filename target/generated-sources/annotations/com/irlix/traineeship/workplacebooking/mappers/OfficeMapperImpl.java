@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-10-03T10:56:05+0300",
+    date = "2024-12-13T09:54:01+0300",
     comments = "version: 1.6.0, compiler: javac, environment: Java 22.0.1 (Oracle Corporation)"
 )
 @Component
@@ -20,13 +20,13 @@ public class OfficeMapperImpl implements OfficeMapper {
             return null;
         }
 
+        Boolean isDeleted = null;
         String address = null;
         String name = null;
 
+        isDeleted = officeEntity.getIsDeleted();
         address = officeEntity.getAddress();
         name = officeEntity.getName();
-
-        boolean isDeleted = false;
 
         OfficeForAdminDTO officeForAdminDTO = new OfficeForAdminDTO( address, name, isDeleted );
 
@@ -43,6 +43,7 @@ public class OfficeMapperImpl implements OfficeMapper {
 
         officeEntity.setAddress( officeForAdminDTO.address() );
         officeEntity.setName( officeForAdminDTO.name() );
+        officeEntity.setIsDeleted( officeForAdminDTO.isDeleted() );
 
         return officeEntity;
     }
@@ -55,6 +56,7 @@ public class OfficeMapperImpl implements OfficeMapper {
 
         toOfficeEntity.setAddress( officeForAdminDTO.address() );
         toOfficeEntity.setName( officeForAdminDTO.name() );
+        toOfficeEntity.setIsDeleted( officeForAdminDTO.isDeleted() );
     }
 
     @Override
@@ -63,13 +65,13 @@ public class OfficeMapperImpl implements OfficeMapper {
             return null;
         }
 
-        String officeName = null;
         String officeAddress = null;
+        String officeName = null;
 
-        officeName = officeEntity.getName();
         officeAddress = officeEntity.getAddress();
+        officeName = officeEntity.getName();
 
-        OfficeForOfficeDTO officeForOfficeDTO = new OfficeForOfficeDTO( officeName, officeAddress );
+        OfficeForOfficeDTO officeForOfficeDTO = new OfficeForOfficeDTO( officeAddress, officeName );
 
         return officeForOfficeDTO;
     }

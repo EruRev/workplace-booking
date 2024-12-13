@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-10-03T10:56:05+0300",
+    date = "2024-12-13T09:54:01+0300",
     comments = "version: 1.6.0, compiler: javac, environment: Java 22.0.1 (Oracle Corporation)"
 )
 @Component
@@ -24,12 +24,12 @@ public class WorkplaceMapperImpl implements WorkplaceMapper {
         Integer number = null;
         String description = null;
         UUID workspaceId = null;
+        Boolean isDeleted = null;
 
         number = workplaceEntity.getNumber();
         description = workplaceEntity.getDescription();
         workspaceId = workplaceEntity.getWorkspaceId();
-
-        boolean isDeleted = false;
+        isDeleted = workplaceEntity.getIsDeleted();
 
         WorkplaceForAdminDTO workplaceForAdminDTO = new WorkplaceForAdminDTO( number, description, workspaceId, isDeleted );
 
@@ -49,6 +49,7 @@ public class WorkplaceMapperImpl implements WorkplaceMapper {
         }
         workplaceEntity.setDescription( workplaceDTO.description() );
         workplaceEntity.setWorkspaceId( workplaceDTO.workspaceId() );
+        workplaceEntity.setIsDeleted( workplaceDTO.isDeleted() );
 
         return workplaceEntity;
     }
@@ -64,6 +65,7 @@ public class WorkplaceMapperImpl implements WorkplaceMapper {
         }
         toWorkspaceEntity.setDescription( workplaceForAdminDTO.description() );
         toWorkspaceEntity.setWorkspaceId( workplaceForAdminDTO.workspaceId() );
+        toWorkspaceEntity.setIsDeleted( workplaceForAdminDTO.isDeleted() );
     }
 
     @Override
