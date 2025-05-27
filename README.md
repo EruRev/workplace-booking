@@ -1,8 +1,5 @@
 ## Сервис бронирования рабочих мест
 
-[![Coverage](http://sonarqube.lan/api/project_badges/measure?project=workplace-booking&metric=coverage&token=50638edbc2a4eb739b2282cb6900612354b41fbd)](http://sonarqube.lan/dashboard?id=workplace-booking)
-[![Code Smells](http://sonarqube.lan/api/project_badges/measure?project=workplace-booking&metric=code_smells&token=50638edbc2a4eb739b2282cb6900612354b41fbd)](http://sonarqube.lan/dashboard?id=workplace-booking)
-
 ### Functions
 
 ### Environment variables
